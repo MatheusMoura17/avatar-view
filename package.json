@@ -4,14 +4,16 @@
   "main": "index.js",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build build --base=/avatar-view/",
-    "preview": "vite preview"
+    "build": "tsc && vite build --base=/avatar-view/ ",
+    "preview": "vite preview",
+    "deploy": "gh-pages --dist dist"
   },
   "author": "Matheus Moura",
   "license": "ISC",
   "description": "",
   "dependencies": {
     "@types/three": "^0.172.0",
+    "gh-pages": "^6.3.0",
     "three": "^0.172.0",
     "typescript": "^5.7.3",
     "vite": "^6.0.7"

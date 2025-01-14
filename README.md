@@ -21,7 +21,7 @@ const MacarenaDancer = () => {
 
   return (
     <WebView 
-      source={{ uri: 'https://github.com/MatheusMoura17/avatar-view' }} 
+      source={{ uri: 'https://matheusmoura17.github.io//avatar-view' }} 
       style={{ flex: 1 }}
       onMessage={handleMessage}
       ref={webViewRef}
@@ -32,7 +32,7 @@ const MacarenaDancer = () => {
 
 ## Como usar
 
-1. Crie um webview de `https://github.com/MatheusMoura17/avatar-view`.
+1. Crie um webview de `https://matheusmoura17.github.io/avatar-view`.
 2. Aguarde a mensagem `ready` ser recebida.
 3. Injete um javascript no webview com os metodos disponíveis abaixo.
 
