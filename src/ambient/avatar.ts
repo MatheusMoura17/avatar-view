@@ -2,6 +2,9 @@ import * as THREE from "three"
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 import { FBXLoader } from 'three/examples/jsm/loaders/FBXLoader'
 
+import idleFbx from "../animations/idle.fbx?url"
+import macarenaFbx from "../animations/macarena.fbx?url"
+
 const isBone = (object: THREE.Object3D): object is THREE.Bone => {
   return (object as THREE.Bone).isBone === true;
 };
@@ -17,10 +20,9 @@ const renameAvatarBones = (avatar: THREE.Object3D) => {
 
 export const createAvatarMixer = async (avatar: THREE.Group) => {
   const fbxLoader = new FBXLoader();
-  const basename = import.meta.env.BASE_URL;
-  const idleFbx = await fbxLoader.loadAsync(basename + "assets/animations/idle.fbx");
+  const animFbx = await fbxLoader.loadAsync(idleFbx);
 
-  const clip = idleFbx.animations[0];
+  const clip = animFbx.animations[0];
 
   const mixer = new THREE.AnimationMixer(avatar);
   const action = mixer.clipAction(clip);
@@ -32,10 +34,9 @@ export const createAvatarMixer = async (avatar: THREE.Group) => {
 
 export const playAvatarMacarena = async (mixer: THREE.AnimationMixer) => {
   const fbxLoader = new FBXLoader();
-  const basename = import.meta.env.BASE_URL;
-  const idleFbx = await fbxLoader.loadAsync(basename + "assets/animations/macarena.fbx");
+  const animFbx = await fbxLoader.loadAsync(macarenaFbx);
 
-  const clip = idleFbx.animations[0];
+  const clip = animFbx.animations[0];
 
   const action = mixer.clipAction(clip);
 

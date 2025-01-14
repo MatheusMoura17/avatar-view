@@ -1,10 +1,11 @@
 import * as THREE from 'three';
 
+import backgroundImg from "../images/background.jpg"
+
 export const createScene = () => {
   const scene = new THREE.Scene();
   const textureLoader = new THREE.TextureLoader();
-  const basename = import.meta.env.BASE_URL;
-  textureLoader.load(basename + "assets/background.jpg", (texture) => {
+  textureLoader.load(backgroundImg, (texture) => {
     scene.background = texture;
   })
   return scene;
