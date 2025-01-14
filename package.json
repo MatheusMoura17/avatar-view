@@ -1,0 +1,19 @@
+{
+  "name": "avatar-view",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build build --base=/avatar-view/",
+    "preview": "vite preview"
+  },
+  "author": "Matheus Moura",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@types/three": "^0.172.0",
+    "three": "^0.172.0",
+    "typescript": "^5.7.3",
+    "vite": "^6.0.7"
+  }
+}
