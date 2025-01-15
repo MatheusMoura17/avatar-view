@@ -8,9 +8,9 @@ Biblioteca simples de renderização de avatares 3D para React Native e Web
 import { WebView } from 'react-native-webview';
 
 const MacarenaDancer = () => {
-  const webViewRef = useRef<WebViewRefType>(null);
+  const webViewRef = useRef(null);
 
-  const handleMessage  = (e) => {
+  const handleMessage  = (e: Event) => {
     if(e.nativeEvent.data === "ready"){
       const js = `
         playMacarena()
