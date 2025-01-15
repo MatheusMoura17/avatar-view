@@ -21,7 +21,7 @@ const MacarenaDancer = () => {
 
   return (
     <WebView 
-      source={{ uri: 'https://matheusmoura17.github.io//avatar-view' }} 
+      source={{ uri: 'https://matheusmoura17.github.io/avatar-view' }} 
       style={{ flex: 1 }}
       onMessage={handleMessage}
       ref={webViewRef}
